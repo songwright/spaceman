@@ -8,6 +8,7 @@ import {
   StyleSheet,
   Model
 } from 'react-vr';
+import TextScene from './TextScene';
 
 export default class spaceman extends React.Component {
   constructor(props) {
@@ -21,6 +22,7 @@ export default class spaceman extends React.Component {
       <View>
         <AmbientLight instensity={ 2.5 } />
         <Pano source={asset(this.state.background)}/>
+        <TextScene />
         <Model
           source={{
             obj: asset('/nasa-aqua-satellite-obj/nasa-aqua-satellite.obj'),
