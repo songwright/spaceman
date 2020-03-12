@@ -10,10 +10,16 @@ import {
 } from 'react-vr';
 
 export default class spaceman extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      background: 'space.jpg'
+    }
+  }
   render() {
     return (
       <View>
-        <AmbientLight instensity={0.25} />
+        <AmbientLight instensity={ 2.5 } />
         <Pano source={asset('chess-world.jpg')}/>
       </View>
     );
