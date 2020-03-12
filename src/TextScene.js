@@ -68,6 +68,7 @@ export default class TextScene extends React.Component {
         <VrButton onClick={this.startVideo.bind(this)}>
           {this.renderItems()}
         </VrButton>
+        {this.useAudio()}
         <Text
           style={{
             backgroundColor: '#777879',
