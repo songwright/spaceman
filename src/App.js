@@ -20,7 +20,7 @@ export default class spaceman extends React.Component {
     return (
       <View>
         <AmbientLight instensity={ 2.5 } />
-        <Pano source={asset('chess-world.jpg')}/>
+        <Pano source={asset(this.state.background)}/>
       </View>
     );
   }
