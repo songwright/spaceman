@@ -31,7 +31,34 @@ export default class spaceman extends React.Component {
               { translate: [-1, 0, -0.75] },
               { scale: 0.075 },
               { rotateX: 180 },
-              { rotateY: -360 },
+              { rotateY: -360 }
+            ]
+          }}
+        />
+        <Model
+          source={{
+            obj: asset('/Loral-1300Com-obj/Loral-1300Com-main.obj'),
+            mtl: asset('/Loral-1300Com-obj/Loral-1300Com-main.mtl')
+          }}
+          style={{
+            transform: [
+              { translate: [6, 0, -10] },
+              { scale: 0.01 },
+              { rotateX: 30 },
+              { rotateY: -45 }
+            ]
+          }}
+        />
+        <Model
+          source={{
+            obj: asset('/EMU/EMU.obj'),
+            mtl: asset('/EMU/EMU.mtl')
+          }}
+          style={{
+            transform: [
+              { translate: [-1.5, -0.75, 1] },
+              { scale: 0.5 },
+              { rotateY: 180 }
             ]
           }}
         />
