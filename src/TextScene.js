@@ -7,7 +7,7 @@ export default class TextScene extends React.Component {
       <View>
         <Text
           style={{
-            background: '#777879',
+            backgroundColor: '#777879',
             fontSize: 0.5,
             fontWeight: '400',
             paddingLeft: 0.2,
@@ -23,7 +23,7 @@ export default class TextScene extends React.Component {
         >Aqua Satellite click here</Text>
         <Text
           style={{
-            background: '#777879',
+            backgroundColor: '#777879',
             fontSize: 0.5,
             fontWeight: '400',
             paddingLeft: 0.2,
@@ -36,6 +36,21 @@ export default class TextScene extends React.Component {
             ]
           }}
         >Loral-1300Com</Text>
+        <Text
+          style={{
+            backgroundColor: '#777879',
+            fontSize: 0.5,
+            fontWeight: '400',
+            paddingLeft: 0.2,
+            paddingRight: 0.2,
+            textAlign: 'center',
+            textAlignVertical: 'center',
+            transform: [
+              { translate: [-2.5, 2, -1] },
+              { scale: 0.25 }
+            ]
+          }}
+        >The Mechanic</Text>
       </View>
     )
   }
