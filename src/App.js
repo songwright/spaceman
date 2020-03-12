@@ -25,5 +25,3 @@ export default class spaceman extends React.Component {
     );
   }
 };
-
-AppRegistry.registerComponent('spaceman', () => spaceman);
