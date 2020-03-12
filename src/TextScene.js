@@ -69,7 +69,7 @@ export default class TextScene extends React.Component {
           {this.renderItems()}
         </VrButton>
         {this.useAudio()}
-        <Text
+        {/* <Text
           style={{
             backgroundColor: '#777879',
             fontSize: 0.5,
@@ -83,8 +83,8 @@ export default class TextScene extends React.Component {
               { scale: 1 }
             ]
           }}
-        >Loral-1300Com</Text>
-        <Text
+        >Loral-1300Com</Text> */}
+        {/* <Text
           style={{
             backgroundColor: '#777879',
             fontSize: 0.5,
@@ -98,7 +98,7 @@ export default class TextScene extends React.Component {
               { scale: 0.25 }
             ]
           }}
-        >The Mechanic</Text>
+        >The Mechanic</Text> */}
       </View>
     )
   }
