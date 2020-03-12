@@ -1,17 +1,32 @@
 import React from 'react';
-import { Text, View, StyleSheet, Video, asset, VrButton } from 'react-vr';
+import { Text, View, StyleSheet, Video, asset, VrButton, Sound } from 'react-vr';
 
 export default class TextScene extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      video: false
+      video: false,
+      audio: true,
+      wavFile: '/578628main_hskquindar.mp3'
     };
+  }
+
+  useAudio() {
+    if (this.state.audio === true) {
+      return <Sound
+        loop={true}
+        volume={0.7}
+        source={{
+          wav: asset(this.state.wavFile)
+        }}
+      />
+    }
   }
 
   startVideo() {
     this.setState({
-      video: true
+      video: true,
+      audio: false
     });
   }
 
