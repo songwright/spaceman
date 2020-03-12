@@ -6,38 +6,60 @@ import {
   View,
   AmbientLight,
   StyleSheet,
-  Model
+  Model,
+  Animated
 } from 'react-vr';
+import Easing from 'react-vr';
 import TextScene from './TextScene';
+
+const AnimatedModel = Animated.createAnimatedComponent(Model);
 
 export default class spaceman extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      background: 'space.jpg'
+      background: 'space.jpg',
+      satelliteRotZ: new Animated.Value(0)
     }
   }
+
+  componentDidMount() {
+    this.state.satelliteRotZ.setValue(0);
+    Animated.timing(
+      this.state.satelliteRotZ,
+      {
+        toValue: -300,
+        duration: 10000,
+        delay: 2000,
+        easing: Easing.inOut
+      }
+    ).start();
+  }
+
   render() {
     return (
       <View>
         <AmbientLight instensity={ 2.5 } />
         <Pano source={asset(this.state.background)}/>
         <TextScene />
-        <Model
+        <AnimatedModel
           source={{
             obj: asset('/nasa-aqua-satellite-obj/nasa-aqua-satellite.obj'),
             mtl: asset('/nasa-aqua-satellite-obj/nasa-aqua-satellite.mtl')
           }}
           style={{
             transform: [
-              { translate: [-1, 0, -0.75] },
+              { translateX: -1 },
+              { translateY: 0 },
+              { translateZ: -0.75 },
               { scale: 0.075 },
               { rotateX: 180 },
-              { rotateY: -360 }
+              { rotateY: -360 },
+              { rotateZ: this.state.satelliteRotZ }
             ]
           }}
         />
-        <Model
+        {/* <Model
           source={{
             obj: asset('/Loral-1300Com-obj/Loral-1300Com-main.obj'),
             mtl: asset('/Loral-1300Com-obj/Loral-1300Com-main.mtl')
@@ -63,7 +85,7 @@ export default class spaceman extends React.Component {
               { rotateY: 180 }
             ]
           }}
-        />
+        /> */}
       </View>
     );
   }
