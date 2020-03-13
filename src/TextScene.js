@@ -84,7 +84,7 @@ export default class TextScene extends React.Component {
             ]
           }}
         >Loral-1300Com</Text>
-        {/* <Text
+        <Text
           style={{
             backgroundColor: '#777879',
             fontSize: 0.5,
@@ -98,7 +98,7 @@ export default class TextScene extends React.Component {
               { scale: 0.25 }
             ]
           }}
-        >The Mechanic</Text> */}
+        >Ramon in Space!</Text>
       </View>
     )
   }
