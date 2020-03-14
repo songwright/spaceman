@@ -59,7 +59,7 @@ export default class spaceman extends React.Component {
             ]
           }}
         />
-        {/* <Model
+        <Model
           source={{
             obj: asset('/Loral-1300Com-obj/Loral-1300Com-main.obj'),
             mtl: asset('/Loral-1300Com-obj/Loral-1300Com-main.mtl')
@@ -85,7 +85,7 @@ export default class spaceman extends React.Component {
               { rotateY: 180 }
             ]
           }}
-        /> */}
+        />
       </View>
     );
   }
